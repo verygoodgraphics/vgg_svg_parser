@@ -1,0 +1,18 @@
+{
+  "name": "@verygoodgraphics/vgg-svg-parser",
+  "homepage": "https://verygoodgraphics.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/verygoodgraphics/vgg_svg_parser.git"
+  },
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.8"
+  }
+}
