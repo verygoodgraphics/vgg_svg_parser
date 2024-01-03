@@ -94,3 +94,11 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+code {
+  max-width: 1280px;
+  display: block;
+  overflow: scroll;
+  border: 1px solid black;
+  margin: 20px;
+}

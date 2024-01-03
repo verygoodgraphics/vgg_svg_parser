@@ -2,6 +2,8 @@ import './style.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
+import { prettySvg, parseSvg } from './parser.js'
+import viteLogoSvgString from '/vite.svg?raw'
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -22,3 +24,6 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))
+
+document.querySelector('#input').innerText = prettySvg(viteLogoSvgString);
+document.querySelector('#output').innerText = prettySvg(parseSvg(viteLogoSvgString));
