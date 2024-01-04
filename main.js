@@ -2,7 +2,7 @@ import './style.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
-import { prettySvg, preprocessSvg } from './parser.js'
+import { prettySvg, preprocessSvg, xml2json } from './parser.js'
 import viteLogoSvgString from '/vite.svg?raw'
 import tigerSvgString from './tiger.svg?raw'
 
@@ -27,4 +27,4 @@ document.querySelector('#app').innerHTML = `
 setupCounter(document.querySelector('#counter'))
 
 document.querySelector('#input').innerText = prettySvg(tigerSvgString);
-document.querySelector('#output').innerText = prettySvg(preprocessSvg(tigerSvgString));
+document.querySelector('#output').innerText = JSON.stringify(xml2json(preprocessSvg(tigerSvgString)), null, 2);
