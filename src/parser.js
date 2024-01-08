@@ -1,5 +1,6 @@
 import { optimize } from "svgo";
 import fxp from "fast-xml-parser";
+import { handleSvg } from './handlers';
 
 export function prettySvg(svgString) {
   const result = optimize(svgString, {
@@ -68,4 +69,9 @@ export function xml2json(xmlString) {
   };
   const xmlParser = new fxp.XMLParser(options);
   return xmlParser.parse(xmlString);
+}
+
+export function svg2vgg(svgString) {
+  const data = xml2json(preprocessSvg(svgString));
+  return handleSvg(data);
 }

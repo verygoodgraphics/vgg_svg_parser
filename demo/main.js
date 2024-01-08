@@ -1,4 +1,4 @@
-import { prettySvg, preprocessSvg, xml2json } from '../src/parser.js'
+import { prettySvg, preprocessSvg, xml2json, svg2vgg } from '../src/parser.js'
 import './style.css'
 
 import viteSvgString from './public/vite.svg?raw'
@@ -22,6 +22,7 @@ document.querySelector('#input-selector').addEventListener('change', function(ev
   const val = evt?.target?.value;
   document.querySelector('#input-render').innerHTML = val;
   document.querySelector('#input').innerText = prettySvg(val);
-  document.querySelector('#output').innerText = JSON.stringify(xml2json(preprocessSvg(val)), null, 2);
+  document.querySelector('#preprocessed-input').innerText = JSON.stringify(xml2json(preprocessSvg(val)), null, 2);
+  document.querySelector('#output').innerText = JSON.stringify(svg2vgg(val), null, 2);
 });
 document.querySelector('#input-selector').dispatchEvent(new Event('change'));
