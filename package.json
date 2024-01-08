@@ -6,17 +6,24 @@
     "url": "https://github.com/verygoodgraphics/vgg_svg_parser.git"
   },
   "version": "0.0.0",
-  "type": "module",
+  "files": ["dist"],
+  "main": "./dist/vgg-svg-parser.umd.js",
+  "module": "./dist/vgg-svg-parser.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vgg-svg-parser.es.js",
+      "require": "./dist/vgg-svg-parser.umd.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "vite": "^5.0.8"
+    "build": "vite build"
   },
   "dependencies": {
     "fast-xml-parser": "^4.3.2",
     "svgo": "^3.2.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.8"
   }
 }
