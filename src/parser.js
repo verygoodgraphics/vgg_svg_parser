@@ -73,5 +73,5 @@ export function xml2json(xmlString) {
 
 export function svg2vgg(svgString) {
   const data = xml2json(preprocessSvg(svgString));
-  return handleSvg(data);
+  return handleSvg(data["svg"]);
 }
