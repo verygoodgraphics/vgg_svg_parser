@@ -2,6 +2,8 @@
 
 This parser aims at converting Scalable Vector Graphics (SVG) to VGG format.
 
+:fire: This project is participating OSPP 2024 Summer of Code! Please checkout it [here](https://summer-ospp.ac.cn/org/prodetail/246540051?lang=en&list=pro).
+
 ## How to develop
 
 This repo consists of two parts
